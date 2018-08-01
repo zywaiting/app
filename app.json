@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/location/location",
+    "pages/joke/joke",
+    "pages/personal/personal",
+    "pages/crity/crity",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "吃货的世界",
+    "navigationBarTextStyle":"black"
+  },"tabBar": {
+    "selectedColor": "#FF3300",
+    "color": "#999999",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home_on.png"
+    },{
+      "pagePath": "pages/location/location",
+      "text": "地点",
+      "iconPath": "images/category.png",
+      "selectedIconPath": "images/category_on.png"
+    },{
+      "pagePath": "pages/joke/joke",
+      "text": "娱乐",
+      "iconPath": "images/recreation.png",
+      "selectedIconPath": "images/recreation_on.png"
+    },{
+      "pagePath": "pages/personal/personal",
+      "text": "我的",
+      "iconPath": "images/buy.png",
+      "selectedIconPath": "images/buy_on.png"
+    }]
+  }
+}

@@ -1,0 +1,7 @@
+/* pages/joke/joke.wxss */
+.font{
+  font-size: 12px;
+  background-color: #ff00f22d;
+  border-color: rgb(255, 0, 0);
+  margin: 10rpx
+}

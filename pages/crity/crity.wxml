@@ -1,0 +1,32 @@
+<!--pages/crity/crity.wxml-->
+<!--<text>{{crity}}</text>-->
+<swiper indicator-dots="true" indicator-active-color="#104E8B"
+  autoplay="true" interval="5000" duration="500">
+  <block wx:for="{{critymainpicture}}">
+    <swiper-item>
+      <image class='imge' src="{{item}}" class="imge" mode="widthFix"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view class="flex-wrp" style="flex-direction:row;">
+  <block wx:for="{{icoUrls}}">
+    <view class="flex-item bc" bindtap="{{item.button}}">
+      <view class='hightz'>
+        <image class="centerz" src="{{item.image}}"></image>
+      </view>
+      <view>
+        <text class='fontz'>{{item.name}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="flex-wrp" style="height: 300px;flex-direction:column;">
+  <block wx:for="{{crityinfo}}">
+    <view class="flex-item text">
+      <text class='fontz'>{{item}}</text>
+    </view>
+  </block>
+</view>

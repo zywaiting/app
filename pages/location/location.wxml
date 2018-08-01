@@ -1,0 +1,17 @@
+<!--pages/location/location.wxml-->
+<view class="section page">
+  <block wx:for="{{zhihu}}">
+    <view class="flex-wrp" style="flex-direction:row;">
+      <block wx:for="{{item}}" wx:for-item="crity">
+        <view class="flex-item bc" bindtap='bindViewTab' data-crityname="{{crity.name}}">
+          <view class='hightz'>
+            <image class="centerz" src="{{crity.image}}"></image>
+          </view>
+          <view>
+            <text class='fontz'>{{crity.name}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,41 @@
+/* pages/crity/crity.wxss */
+@import "../../lib/weui.wxss";
+
+.page-section{
+  margin-bottom: 20rpx;
+}
+.flex-wrp {display: flex;}
+.bc {
+  background: white;
+  width:185rpx;
+  height: 200rpx; 
+  border:0rpx rgba(255, 255, 0, 0.082) groove;
+  text-align:center
+}
+.centerz {
+  width: 80%;
+  height: 100%;
+}
+.fontz{
+  font-size: 12px;
+  line-height: 0px
+}
+.hightz{
+  width: 100%;
+  height: 70%
+}
+.imge{
+  width: 100%;
+}
+.text{
+  width: 100%;
+  line-height:40rpx;
+  background: white;
+  height: 200rpx; 
+  border:3rpx rgba(255, 255, 0, 0.082) groove;
+  text-align: left;
+}
+.page{
+  width:100%;
+  overflow: hidden
+}

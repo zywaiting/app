@@ -1,0 +1,10 @@
+<!--pages/joke/joke.wxml-->
+<block wx:for="{{zhihu}}" >
+  <view class='font'>
+    <text>{{item.content}}</text>
+  </view>
+</block>
+
+<view>
+  <button bindtap='bindtest'>换一篇</button>
+</view>
