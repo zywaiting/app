@@ -1,8 +1,11 @@
 // pages/dialog/dialog.js
+//获取应用实例
+const app = getApp()
 Component({
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
+
   /**
    * 组件的属性列表
    */
@@ -30,7 +33,7 @@ Component({
    */
   data: {
     // 弹窗显示控制
-    isShow: false
+    isShow: true
   },
 
   /**
@@ -47,6 +50,7 @@ Component({
     showDialog() {
       this.setData({
         isShow: !this.data.isShow
+        
       })
     },
     /**

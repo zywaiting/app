@@ -24,6 +24,8 @@ App({
   },
   globalData: {
     crityinfo: null,
-    userInfo:null
+    hasUserInfo: false,
+    userInfo:null,
+    //isShow:true
   }
 })
