@@ -5,7 +5,8 @@
     "pages/joke/joke",
     "pages/personal/personal",
     "pages/crity/crity",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/dialog/dialog"
   ],
   "window":{
     "backgroundTextStyle":"light",

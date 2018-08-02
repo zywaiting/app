@@ -23,6 +23,7 @@ App({
     })
   },
   globalData: {
-    crityinfo: null
+    crityinfo: null,
+    userInfo:null
   }
 })
