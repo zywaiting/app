@@ -68,7 +68,7 @@ Page({
   bindtest: function () {
     var that = this//不要漏了这句，很重要
     wx.request({
-      url: 'https://www.zhuyao.xin:9005/api/joke',
+      url: 'https://www.zhuyao.xin/api/joke',
       data: {
       },
       method: 'GET',

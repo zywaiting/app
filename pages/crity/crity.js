@@ -27,7 +27,7 @@ Page({
     console.log(options.crity);
     var that = this//不要漏了这句，很重要
     wx.request({
-      url: 'https://www.zhuyao.xin:9005/api/crityinfo',
+      url: 'https://www.zhuyao.xin/api/crityinfo',
       data: {
         crity: options.crity
       },
@@ -50,7 +50,7 @@ Page({
       }
     });
     wx.request({
-      url: 'https://www.zhuyao.xin:9005/api/critymainpicture',
+      url: 'https://www.zhuyao.xin/api/critymainpicture',
       data: {
         crity: options.crity
       },
@@ -130,7 +130,7 @@ Page({
     var that = this//不要漏了这句，很重要
     console.log(app.globalData.crityinfo)
     wx.request({
-      url: 'https://www.zhuyao.xin:9005/api/crityinfo',
+      url: 'https://www.zhuyao.xin/api/crityinfo',
       data: {
         crity: app.globalData.crityinfo
       },

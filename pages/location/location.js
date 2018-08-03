@@ -15,7 +15,7 @@ Page({
     var that = this//不要漏了这句，很重要
     console.log("调用");
     wx.request({
-      url: 'https://www.zhuyao.xin:9005/api/crity',
+      url: 'https://www.zhuyao.xin/api/crity',
       data: {
       },
       method: 'GET',

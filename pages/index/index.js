@@ -44,14 +44,29 @@ Page({
 
   bindGetUserInfo: function (e) {
     // 用户点击授权后，这里可以做一些登陆操作
-    // this.login();
-    console.log(e)
     console.log(e.detail.detail.userInfo)
-    app.globalData.userInfo = e.detail.detail.userInfo
-    this.setData({
-      userInfo: e.detail.detail.userInfo,
-      //hasUserInfo: true
-    })
-    console.log(app.globalData.hasUserInfo)
+    //app.js做登录
+    app.onLogin(e);
+    // wx.request({
+    //   url: 'https://www.zhuyao.xin/updateuserconfig',
+    //   data: {
+    //     userInfo: e.detail.detail.userInfo
+    //   },
+    //   method: 'GET',
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     //将获取到的json数据，存在名字叫zhihu的这个数组中
+    //     console.log("11111111111"),
+    //       that.setData({
+    //         //res代表success函数的事件对，data是固定的，stories是是上面json数据中stories
+    //       })
+    //     console.log(res.data);
+    //   },
+    //   fail: function (res) {
+    //     console.log("--------fail--------");
+    //   }
+    // });
   }
 })
