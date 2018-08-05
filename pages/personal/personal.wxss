@@ -1,1 +1,4 @@
 /* pages/personal/personal.wxss */
+.btn{
+  margin-top: 10rpx;
+}
