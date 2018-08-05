@@ -6,29 +6,28 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    wx.getLocation({
-      type: 'wgs84',
-      success: function (res) {
-        that.globalData.location = res
-      }
-    })
     wx.login({
-      success:res => {
-        wx.request({
-          url: 'https://www.zhuyao.xin/onLogin',
-          data: {
-            code: res.code,
-            express: 'word',
-            name: 'LoginUrl',
-            location: that.globalData.location
-          },
+      success:code => {
+        console.log(code.code);
+        wx.getLocation({
+          type: 'wgs84',
           success: function (res) {
-            console.log(res.data.data);
-            console.log(that.globalData.location);
-            that.globalData.openId = res.data.data
-          },
-          fail: function (res) {
-            console.log("--------fail--------");
+            wx.request({
+              url: 'https://www.zhuyao.xin/onLogin',
+              data: {
+                code: code.code,
+                express: 'word',
+                name: 'LoginUrl',
+                location: res
+              },
+              success: function (res) {
+                console.log(res);
+                console.log("--------success--------");
+              },
+              fail: function (res) {
+                console.log("--------fail--------");
+              }
+            })
           }
         })
       }
@@ -36,7 +35,6 @@ App({
   },
   globalData: {
     crityinfo: null,
-    location: null,
     openId: null
   },
   onLogin: function (e) {
