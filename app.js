@@ -35,7 +35,8 @@ App({
   },
   globalData: {
     crityinfo: null,
-    openId: null
+    openId: null,
+    uploadMp3:null
   },
   onLogin: function (e) {
     var that = this//不要漏了这句，很重要

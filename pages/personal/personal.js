@@ -127,6 +127,7 @@ Page({
   },
   //上传录音
   upload: function () {
+    var that = this//不要漏了这句，很重要
     wx.uploadFile({
       url: "https://www.zhuyao.xin/fileUpload",//演示域名、自行配置
       filePath: this.tempFilePath,
@@ -139,7 +140,18 @@ Page({
           userId: 12345678 //附加信息为用户ID
         },
       success: function (res) {
-        console.log(res);
+        var jsonStr = res.data;
+        jsonStr = jsonStr.replace(" ", "");
+        if (typeof jsonStr != 'object') {
+          jsonStr = jsonStr.replace(/\ufeff/g, "");//重点
+          var jj = JSON.parse(jsonStr);
+          res.data = jj;
+        }
+        console.log(res.data);
+        that.setData({
+          result: res.data,
+          //res代表success函数的事件对，data是固定的，stories是是上面json数据中stories
+        })
         wx.showToast({
           title: '上传成功',
           icon: 'success',
