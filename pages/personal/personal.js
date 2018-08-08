@@ -105,11 +105,13 @@ Page({
   },
   //停止录音
   stop: function () {
+    var that = this;
     recorderManager.stop();
     recorderManager.onStop((res) => {
       this.tempFilePath = res.tempFilePath;
       console.log('停止录音', res.tempFilePath)
       const { tempFilePath } = res
+      that.upload();
     })
   },
   //播放声音
@@ -141,6 +143,8 @@ Page({
         },
       success: function (res) {
         var jsonStr = res.data;
+        console.log(jsonStr);
+        console.log(res.data);
         jsonStr = jsonStr.replace(" ", "");
         if (typeof jsonStr != 'object') {
           jsonStr = jsonStr.replace(/\ufeff/g, "");//重点
@@ -165,5 +169,15 @@ Page({
 
       }
     })
+  }, 
+  bindTouchStart: function (e) {
+    var that = this;
+    that.start();
+    console.log("开始录音！");
+  },
+  bindTouchEnd: function (e) {
+    var that = this;
+    that.stop();
+    console.log("停止录音");
   }
 })

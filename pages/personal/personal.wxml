@@ -1,15 +1,36 @@
 <!--pages/personal/personal.wxml-->
 <text>敬请期待！</text>
-<button bindtap="start" class='btn'>开始录音</button>
+<!-- <button bindtap="start" class='btn'>开始录音</button>
 <button bindtap="pause" class='btn'>暂停录音</button>
 <button bindtap="stop" class='btn'>停止录音</button>
 <button bindtap="play" class='btn'>播放录音</button>
-<button bindtap="upload" class='btn'>上传录音</button>
+<button bindtap="upload" class='btn'>上传录音</button> -->
+
+
+<button bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd" class='btn'>长按录音</button>
+
 
 
 <view class='font'>
-  <text>{{result.asr}}</text>
+  <text>{{result.data.data.asr.result}}</text>
 </view>
+
+
 <view class='font'>
-  <text>{{result.result}}</text>
+  <text>{{result.data.data.nli[0].desc_obj.result}}</text>
 </view>
+
+
+<view class='font'>
+  <text>{{result.data.data.nli[0].data_obj[0].content}}</text>
+</view>
+
+<view class='font'>
+  <text>{{result.data.status}}</text>
+</view>
+
+<view class='font'>
+  <text>{{result}}</text>
+</view>
+
+
