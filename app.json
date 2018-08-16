@@ -7,7 +7,10 @@
     "pages/crity/crity",
     "pages/logs/logs",
     "pages/dialog/dialog",
-    "pages/travel/travel"
+    "pages/travel/travel",
+    "pages/specialty/specialty",
+    "pages/life/life",
+    "pages/introduction/introduction"
   ],
   "window":{
     "backgroundTextStyle":"light",

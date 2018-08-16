@@ -11,7 +11,7 @@ Page({
       { "name": "简介", "button": "introduction", "image":"../../images/简介.png"},
       { "name": "生活", "button": "life", "image": "../../images/生活.png" },
       { "name": "特产", "button": "specialty", "image": "../../images/特产.png" },
-      { "name": "旅游", "button": "tourism", "image": "../../images/旅游.png" }
+      { "name": "旅游", "button": "travel", "image": "../../images/旅游.png" }
     ],
 
     indicatorDots: false,
@@ -37,13 +37,11 @@ Page({
       },
       success: function (res) {
         //将获取到的json数据，存在名字叫zhihu的这个数组中
-        console.log("11111111111"),
-        console.log(options.crity),
         that.setData({
           crityinfo: res.data,
           //res代表success函数的事件对，data是固定的，stories是是上面json数据中stories
         })
-        console.log(res.data);
+        // console.log(res.data);
       },
       fail: function (res) {
         console.log("--------fail--------");
@@ -64,7 +62,7 @@ Page({
           critymainpicture: res.data,
           //res代表success函数的事件对，data是固定的，stories是是上面json数据中stories
         })
-        console.log(res.data);
+        // console.log(res.data);
       },
       fail: function (res) {
         console.log("--------fail--------");
@@ -150,5 +148,24 @@ Page({
         console.log("--------fail--------");
       }
     });
+  },
+  life: function(){
+    wx.navigateTo({
+      //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
+      url: '/pages/life/life?crity=' + getApp().globalData.crityinfo
+    })
+  },
+  specialty: function(){
+    wx.navigateTo({
+      //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
+      url: '/pages/specialty/specialty?crity=' + getApp().globalData.crityinfo
+    })
+  },
+  travel: function(){
+    console.log(getApp().globalData.crityinfo);
+    wx.navigateTo({
+      //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
+      url: '/pages/travel/travel?crity=' + getApp().globalData.crityinfo
+    })
   }
 })
