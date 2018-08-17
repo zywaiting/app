@@ -8,10 +8,10 @@ Page({
    */
   data: {
     icoUrls:[
-      { "name": "简介", "button": "introduction", "image":"../../images/简介.png"},
-      { "name": "生活", "button": "life", "image": "../../images/生活.png" },
-      { "name": "特产", "button": "specialty", "image": "../../images/特产.png" },
-      { "name": "旅游", "button": "travel", "image": "../../images/旅游.png" }
+      { "name": "简介", "button": "introduction", "image":"../../images/introduction.png"},
+      { "name": "生活", "button": "life", "image": "../../images/life.png" },
+      { "name": "特产", "button": "specialty", "image": "../../images/specialty.png" },
+      { "name": "旅游", "button": "travel", "image": "../../images/travel.png" }
     ],
 
     indicatorDots: false,

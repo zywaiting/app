@@ -1,0 +1,11 @@
+<!--pages/recreation/recreation.wxml-->
+<text>pages/recreation/recreation.wxml</text>
+<view class="content">
+
+<!--size属性为default-->
+<button type="primary" size="default" bindtap="joke"> 笑话 </button>
+
+<!--size属性为default-->
+<button type="primary" size="default" bindtap="intelligent"> 语音助手 </button>
+
+</view>

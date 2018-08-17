@@ -1,6 +1,4 @@
-// pages/personal/personal.js
-//获取应用实例
-const app = getApp()
+// pages/recreation/recreation.js
 Page({
 
   /**
@@ -14,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+  
   },
 
   /**
@@ -64,5 +62,17 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  joke: function(){
+    wx.navigateTo({
+      //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
+      url: '/pages/joke/joke'
+    })
+  },
+  intelligent: function(){
+    wx.navigateTo({
+      //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
+      url: '/pages/intelligent/intelligent'
+    })
   }
 })

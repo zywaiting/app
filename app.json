@@ -10,7 +10,9 @@
     "pages/travel/travel",
     "pages/specialty/specialty",
     "pages/life/life",
-    "pages/introduction/introduction"
+    "pages/introduction/introduction",
+    "pages/intelligent/intelligent",
+    "pages/recreation/recreation"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -31,15 +33,15 @@
       "iconPath": "images/category.png",
       "selectedIconPath": "images/category_on.png"
     },{
-      "pagePath": "pages/joke/joke",
+      "pagePath": "pages/recreation/recreation",
       "text": "娱乐",
       "iconPath": "images/recreation.png",
       "selectedIconPath": "images/recreation_on.png"
     },{
       "pagePath": "pages/personal/personal",
       "text": "我的",
-      "iconPath": "images/buy.png",
-      "selectedIconPath": "images/buy_on.png"
+      "iconPath": "images/personal.png",
+      "selectedIconPath": "images/personal_on.png"
     }]
   }
 }
