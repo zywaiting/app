@@ -125,10 +125,10 @@ Page({
       console.log(res.errMsg)
       console.log(res.errCode)
     })
-
   },
   //上传录音
   upload: function () {
+    console.log("123"+app.globalData.openId);
     var that = this//不要漏了这句，很重要
     wx.uploadFile({
       url: "https://www.zhuyao.xin/fileUpload",//演示域名、自行配置
@@ -137,10 +137,10 @@ Page({
       header: {
         "Content-Type": "multipart/form-data"
       },
-      formData:
-        {
-          userId: 12345678 //附加信息为用户ID
-        },
+      formData: {
+          openId: app.globalData.openId //附加信息为用户ID
+      },
+      
       success: function (res) {
         var jsonStr = res.data;
         console.log(jsonStr);
