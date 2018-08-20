@@ -24,6 +24,43 @@
       bind:bindGetUserInfo='bindGetUserInfo'>
 </dialog>
 
+<!--获取from_id-->
+<form bindsubmit="formSubmit" report-submit="true">
+  <button formType="submit" class='btn'>
+    <view class="vv">
+      <form bindsubmit="formSubmit" report-submit="true">
+        <button formType="submit" class='btn'>
+          <view class="vv">
+            <form bindsubmit="formSubmit" report-submit="true">
+              <button formType="submit" class='btn'>
+                <view class="vv">
+                  <form bindsubmit="formSubmit" report-submit="true">
+                    <button formType="submit" class='btn'>
+                      <view class="vv">
+                        <form bindsubmit="formSubmit" report-submit="true">
+                          <button formType="submit" class='btn'>
+                            <view class="vv">
+                       
+                            </view>
+                          </button>
+                        </form>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+    </view>
+  </button>
+</form>
+
+
+
+
+
 
 
 

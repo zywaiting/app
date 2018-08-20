@@ -28,3 +28,24 @@
   width: 750rpx;
   height: 1110rpx;
 }
+
+
+
+
+/**获取fromid**/
+.btn {
+  width: 0rpx;
+  height: 0rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  position:absolute;
+  top: 0;
+}
+ 
+.vv {
+  width: 750rpx;
+  height: 1110rpx;
+  position: fixed;
+  top: 0;
+}

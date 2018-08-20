@@ -68,5 +68,8 @@ Page({
     //     console.log("--------fail--------");
     //   }
     // });
+  },
+  formSubmit: function (e) {
+    console.log("fromId:" + e.detail.formId)
   }
 })
