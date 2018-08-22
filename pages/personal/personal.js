@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    showOrHidden: false,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -51,5 +51,27 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+
+
+
+  formBindsubmit: function (e) {
+    if (e.detail.value.userName.length == 0 || e.detail.value.mobile.length == 0) {
+      // this.setData({
+      //   tip: '提示：用户名和密码不能为空！',
+      //   userName: '',
+      //   mobile: ''
+      // })
+    } else {
+      console.log(e.detail.value)
+    }
+  },
+  formReset: function () {
+    // this.setData({
+    //   tip: '',
+    //   userName: '',
+    //   psw: ''
+    // })
   }
 })

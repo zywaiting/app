@@ -21,6 +21,38 @@
 }
 
 .carte{
+  margin-top: 15rpx;
+  margin-left: 15rpx;
   width: 720rpx;
-  height: 350rpx;
+  height: 400rpx;
+  background-image: url('http://wq-zy.oss-cn-hangzhou.aliyuncs.com/test/mingpian.png');
+  background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;
 }
+
+.fontt{
+  color: gray;
+  margin-top:50rpx;
+  margin-left: 135rpx;
+}
+.imageCode{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left:170rpx;
+}
+.back{
+  width: 750rpx;
+  height: 430rpx;
+  background-color: gray;
+}
+.fontv{
+  display:flex;
+}
+.imageCodev{
+  display:flex;
+}
+.fontz{
+  font-size: 15rpx;
+  margin-top:120rpx;
+  margin-left:150rpx;
+}
+

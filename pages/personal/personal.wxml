@@ -7,11 +7,48 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <!-- <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
-
-  <view>
-    <image class='carte' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/carte/heijin.png'></image>
+  
+  <view class='back' wx:if='{{showOrHidden}}' >
+    <view class='carte'>
+      <view class='fontv'>
+        <text class='fontt'>朱瑶</text>
+      </view>
+      <view class='imageCodev'>
+        <text class='fontz'>18110981995\n\n1573240324@qq.com\n\n苏州市相城区夏家桥118</text>
+        <image class='imageCode' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/test/zy.png'></image>
+      </view>
+    </view>
   </view>
+
+<form bindsubmit="formBindsubmit" bindreset="formReset">
+ <view style="display:flex;">
+  <label>姓名：</label>
+  <input name="userName" placeholder="请输入姓名！" />
+ </view>
+ <view style="display:flex;">
+  <label>手机号：</label>
+  <input name="mobile" placeholder="请输入手机号！" />
+ </view>
+ <view style="display:flex;">
+  <label>邮箱：</label>
+  <input name="email" placeholder="请输入邮箱！" />
+ </view>
+ <view style="display:flex;">
+  <label>QQ：</label>
+  <input name="qq" placeholder="请输入QQ！" />
+ </view>
+ <view style="display:flex;">
+  <label>公司名称：</label>
+  <input name="ORG" placeholder="请输入公司名称!" />
+ </view>
+ <view style="display:flex;">
+  <label>居住地址：</label>
+  <input name="ADR" placeholder="居住地址！" />
+ </view>
+ <view style="display:flex;margin-top:30px;">
+  <button style="width:30%;" formType="submit" >提交</button>
+  <button style="width:30%" formType="reset" >重置</button>
+ </view>
+</form>
+  
 </view>
