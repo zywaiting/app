@@ -1,5 +1,4 @@
 <!--pages/recreation/recreation.wxml-->
-<text>pages/recreation/recreation.wxml</text>
 <view class="content">
 
 <!--size属性为default-->

@@ -30,6 +30,20 @@
 }
 
 
+.indexzimg0{
+  width: 750rpx;
+  height: 800rpx;
+}
+.indexzimg1{
+  width: 750rpx;
+  height: 650rpx;
+}
+.indexzimg7-11{
+  width: 750rpx;
+  height: 500rpx;
+}
+
+
 
 
 /**获取fromid**/

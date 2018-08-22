@@ -1,2 +1,24 @@
 <!--pages/life/life.wxml-->
-<text>pages/life/life.wxml</text>
+<view class='indexz'>
+  <image class='indexzimg0' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/1.jpg'></image>
+  <image class='indexzimg0' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/2.jpg'></image>
+  <image class='indexzimg1' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/3.jpg'></image>
+  <image class='indexzimg0' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/4.jpg'></image>
+  <image class='indexzimg0' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/5.jpg'></image>
+  <image class='indexzimg0' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/6.jpg'></image>
+  <image class='indexzimg7-11' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/7.jpg'></image>
+  <image class='indexzimg7-11' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/8.jpg'></image>
+  <image class='indexzimg7-11' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/9.jpg'></image>
+  <image class='indexzimg7-11' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/10.jpg'></image>
+  <image class='indexzimg7-11' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/11.jpg'></image>
+  <image class='indexzimg0' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/12.jpg'></image>
+  <image class='indexzimg0' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/13.jpg'></image>
+  <image class='indexzimg7-11' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/14.jpg'></image>
+  <image class='indexzimg0' src='http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/shop/15.jpg'></image>
+</view>
+<view>
+  <text>90元一箱，一箱6瓶</text>
+</view>
+<view>
+  <text>有意向加微信：zhuyao19950430</text>
+</view>

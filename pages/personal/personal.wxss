@@ -19,3 +19,8 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.carte{
+  width: 720rpx;
+  height: 350rpx;
+}
