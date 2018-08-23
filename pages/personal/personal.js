@@ -4,10 +4,13 @@ const app = getApp()
 
 Page({
   data: {
-    showOrHidden: false,
+    cardConfig: false,
+    inputConfig:true,
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    tip:'',
+    userCard:null
   },
   //事件处理函数
   bindViewTap: function () {
@@ -16,6 +19,33 @@ Page({
     })
   },
   onLoad: function () {
+    var that = this//不要漏了这句，很重要
+    wx.request({
+      url: 'https://www.zhuyao.xin/api/selectusercard',
+      data: {
+        openId: app.globalData.openId
+      },
+      success: function (res) {
+        console.log(res.data.data);
+        if (res.data.code===200){
+          console.log("--------success--------");
+          that.setData({
+            userCard : res.data.data,
+            cardConfig : true,
+            inputConfig : false
+          })
+        }
+      },
+      fail: function (res) {
+        console.log("--------fail--------");
+      }
+    })
+
+
+
+
+
+
     console.log(app.globalData.userInfo)
     if (app.globalData.userInfo) {
       this.setData({
@@ -57,21 +87,39 @@ Page({
 
 
   formBindsubmit: function (e) {
-    if (e.detail.value.userName.length == 0 || e.detail.value.mobile.length == 0) {
-      // this.setData({
-      //   tip: '提示：用户名和密码不能为空！',
-      //   userName: '',
-      //   mobile: ''
-      // })
-    } else {
+    var that = this//不要漏了这句，很重要
+    if (e.detail.value.name.length == 0 || e.detail.value.mobile.length == 0) {
+      this.setData({
+        tip: '提示：用户名和手机不能为空！',
+      })
+    } else if (e.detail.value.mobile.length != 11){
+      this.setData({
+        tip: '提示：请填11位手机号！',
+      })
+    }else{
       console.log(e.detail.value)
+      wx.request({
+        url: 'https://www.zhuyao.xin/api/createusercard',
+        data: {
+          data: e.detail.value,
+          openId: app.globalData.openId
+        },
+        success: function (res) {
+          that.setData({
+            userCard: res.data.data,
+            cardConfig: true,
+            inputConfig: false
+          })
+        },
+        fail: function (res) {
+          console.log("--------fail--------");
+        }
+      })
     }
   },
   formReset: function () {
-    // this.setData({
-    //   tip: '',
-    //   userName: '',
-    //   psw: ''
-    // })
+    this.setData({
+      tip: ''
+    })
   }
 })
