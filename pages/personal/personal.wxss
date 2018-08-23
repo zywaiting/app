@@ -25,7 +25,7 @@
   margin-left: 15rpx;
   width: 720rpx;
   height: 400rpx;
-  background-image: url('http://wq-zy.oss-cn-hangzhou.aliyuncs.com/test/mingpian.png');
+  background-image: url('http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/carte/mingpian.png');
   background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;
 }
 
