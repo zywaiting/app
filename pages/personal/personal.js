@@ -26,7 +26,6 @@ Page({
         openId: app.globalData.openId
       },
       success: function (res) {
-        console.log(res.data.data);
         if (res.data.code===200){
           console.log("--------success--------");
           that.setData({
@@ -87,6 +86,21 @@ Page({
 
 
   formBindsubmit: function (e) {
+    //存储fromId,用于发消息
+    wx.request({
+      url: 'https://www.zhuyao.xin/api/getfromid',
+      data: {
+        fromId: e.detail.formId,
+        openId: app.globalData.openId
+      },
+      success: function (res) {
+    
+      },
+      fail: function (res) {
+        console.log("--------fail--------");
+      }
+    })
+
     var that = this//不要漏了这句，很重要
     if (e.detail.value.name.length == 0 || e.detail.value.mobile.length == 0) {
       this.setData({

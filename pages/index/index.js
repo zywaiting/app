@@ -109,6 +109,19 @@ Page({
     })
   },
   formSubmit: function (e) {
-    console.log("fromId:" + e.detail.formId)
+    //存储fromId,用于发消息
+    wx.request({
+      url: 'https://www.zhuyao.xin/api/getfromid',
+      data: {
+        fromId: e.detail.formId,
+        openId: app.globalData.openId
+      },
+      success: function (res) {
+
+      },
+      fail: function (res) {
+        console.log("--------fail--------");
+      }
+    })
   }
 })

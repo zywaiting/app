@@ -20,7 +20,7 @@
     </view>
   </view>
 
-<form  wx:if='{{inputConfig}}' bindsubmit="formBindsubmit" bindreset="formReset">
+<form  wx:if='{{inputConfig}}' bindsubmit="formBindsubmit" bindreset="formReset" report-submit="true">
  <view style="display:flex;">
   <label>姓名：</label>
   <input name="name" placeholder="请输入姓名！" />
