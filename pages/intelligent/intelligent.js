@@ -10,7 +10,7 @@ Page({
    */
   data: {
     first:true,
-    loadingHidden: false
+    loadingHidden: true
   },
 
   /**
@@ -24,7 +24,7 @@ Page({
     innerAudioContext.onPlay(() => {
       console.log('开始播放')
       that.setData({
-        loadingHidden: true
+      
       })
     })
     innerAudioContext.onError((res) => {
