@@ -1,4 +1,65 @@
 /* pages/personal/personal.wxss */
+.bigView{
+  width: 750rpx;
+  height: 700rpx;
+}
 .btn{
-  margin-top: 10rpx;
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 285rpx;
+  border-radius: 100%;
+  background-image: url('http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/recreation/intelligent/sir.png');
+  background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;
+}
+.backImge{
+  width: 750rpx;
+  height: 1190rpx;
+  background-image: url('http://wq-zy.oss-cn-hangzhou.aliyuncs.com/applet/recreation/intelligent/intelligent.jpg');
+  background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;
+  flex-direction: row-reverse
+}
+.viewBlank{
+  height: 100rpx;
+}
+.viewTwo{
+  width: 750rpx;
+  height: 450rpx;
+}
+.viewTwo1{
+  margin-left:100rpx;
+  margin-right: 110rpx;
+}
+.viewTwo2{
+  margin-left:200rpx;
+}
+.viewOne{
+  margin-left:100rpx;
+  margin-right: 100rpx;
+  display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+  text-align: center;
+}
+.container{
+  padding:0rpx 0;
+  height:290rpx;
+  margin-left: -110rpx;
+}
+
+
+::-webkit-scrollbar{
+width: 6px;
+height: 6px;
+background-color: #ffffff;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track{
+border-radius: 10px;
+background-color: yellow;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb{
+border-radius: 10px;
+background-color: #ff5500;
 }

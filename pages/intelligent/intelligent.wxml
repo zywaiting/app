@@ -1,36 +1,54 @@
 <!--pages/personal/personal.wxml-->
-<text>敬请期待！</text>
-<!-- <button bindtap="start" class='btn'>开始录音</button>
-<button bindtap="pause" class='btn'>暂停录音</button>
-<button bindtap="stop" class='btn'>停止录音</button>
-<button bindtap="play" class='btn'>播放录音</button>
-<button bindtap="upload" class='btn'>上传录音</button> -->
+<loading hidden="{{ loadingHidden }}">
+    识别中...
+</loading>
 
 
-<button bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd" class='btn'>长按录音</button>
+<view class='backImge'>
+ 
+  <!-- <view class='bigView'>
+    
+
+    <view class='font'>
+      <text>{{result.data.data.nli[0].desc_obj.result}}</text>
+    </view>
 
 
+    <view class='font'>
+      <text>{{result.data.data.nli[0].data_obj[0].content}}</text>
+    </view>
 
-<view class='font'>
-  <text>{{result.data.data.asr.result}}</text>
+    <view class='font'>
+      <text>{{result.data.data.asr.result}}</text>
+    </view>
+
+  </view> -->
+
+    <view class='bigView'>
+    <view class='viewBlank'>
+    </view>
+    <view class='viewTwo'>
+      <view class='font' class='viewTwo1'>
+        <text wx:if="{{result.data.data.nli[0].desc_obj.result}}">{{result.data.data.nli[0].desc_obj.result}}</text>
+        <text wx:if="{{!result.data.data.nli[0].desc_obj.result&&!first}}">未收到您的命令!</text>
+        <text wx:if="{{first}}">主人,请问有什么可以帮助您!\n比如对我说"笑话"</text>
+      </view>
+      <scroll-view class="container" scroll-y="true">
+      <view class='font' class='viewTwo2'>
+        <text wx:if="{{result.data.data.nli[0].data_obj[0].content}}">{{result.data.data.nli[0].data_obj[0].content}}</text>
+      </view>
+      </scroll-view>
+    </view>
+    
+
+    <view class='font' class='viewOne'>
+      <text>{{result.data.data.asr.result}}</text>
+    </view>
+    
+  </view>
+
+  <view>
+    <button class='btn' bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd"></button>
+  </view>
+  
 </view>
-
-
-<view class='font'>
-  <text>{{result.data.data.nli[0].desc_obj.result}}</text>
-</view>
-
-
-<view class='font'>
-  <text>{{result.data.data.nli[0].data_obj[0].content}}</text>
-</view>
-
-<view class='font'>
-  <text>{{result.data.status}}</text>
-</view>
-
-<view class='font'>
-  <text>{{result}}</text>
-</view>
-
-

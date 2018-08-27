@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const innerAudioContext = wx.createInnerAudioContext()
 Page({
   data: {
     motto: 'Hello World',
@@ -15,7 +16,27 @@ Page({
     })
   },
   onLoad: function () {
-    var that = this; 
+    var that = this//不要漏了这句，很重要
+
+
+    wx.request({
+      url: 'https://www.zhuyao.xin/api/voiceprompts',
+      data: {
+        key: "index"
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        that.play(res.data.url)
+        console.log(res.data);
+      },
+      fail: function (res) {
+        console.log("--------fail--------");
+      }
+    });
+
     // 查看是否授权
     wx.getSetting({
       success: function (res) {
@@ -122,6 +143,19 @@ Page({
       fail: function (res) {
         console.log("--------fail--------");
       }
+    })
+  },
+  //播放声音
+  play: function (e) {
+    innerAudioContext.autoplay = true;
+    innerAudioContext.obeyMuteSwitch = false;
+    innerAudioContext.src = e,
+      innerAudioContext.onPlay(() => {
+        console.log('开始播放')
+      })
+    innerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+      console.log(res.errCode)
     })
   }
 })
