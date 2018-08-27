@@ -10,7 +10,7 @@ Page({
    */
   data: {
     first:true,
-    loadingHidden: true
+    loadingHidden: false
   },
 
   /**
@@ -24,7 +24,7 @@ Page({
     innerAudioContext.onPlay(() => {
       console.log('开始播放')
       that.setData({
-      
+        loadingHidden: true
       })
     })
     innerAudioContext.onError((res) => {
@@ -44,7 +44,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    that.setData({
+      loadingHidden: true
+    })
   },
 
   /**
