@@ -163,11 +163,10 @@ Page({
           var jj = JSON.parse(jsonStr);
           res.data = jj;
         }
-        console.log(res.data.data.url);
         that.setData({
           result: res.data,
           first: false,
-          loadingHidden: false
+          loadingHidden: true
           //res代表success函数的事件对，data是固定的，stories是是上面json数据中stories
         })
         // wx.showToast({
@@ -175,8 +174,12 @@ Page({
         //   icon: 'success',
         //   duration: 2000
         // })
-
-        that.play(res.data.data.url);
+        try{
+          that.play(res.data.data.url);
+        }catch(e){
+          loadingHidden: true
+        }
+        
 
       },
       fail: function (res) {
