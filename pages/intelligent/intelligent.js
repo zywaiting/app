@@ -163,7 +163,6 @@ Page({
           var jj = JSON.parse(jsonStr);
           res.data = jj;
         }
-        console.log(res.data.data.url);
         that.setData({
           result: res.data,
           first: false,
@@ -180,7 +179,8 @@ Page({
 
       },
       fail: function (res) {
-        console.log(res);
+        console.log("12321321");
+        
       },
       complete: function (res) {
 
