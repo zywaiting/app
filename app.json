@@ -12,7 +12,8 @@
     "pages/life/life",
     "pages/introduction/introduction",
     "pages/intelligent/intelligent",
-    "pages/recreation/recreation"
+    "pages/recreation/recreation",
+    "pages/movingcar/movingcar"
   ],
   "window":{
     "backgroundTextStyle":"light",

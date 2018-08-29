@@ -6,25 +6,7 @@
 
 <view class='backImge'>
  
-  <!-- <view class='bigView'>
-    
-
-    <view class='font'>
-      <text>{{result.data.data.nli[0].desc_obj.result}}</text>
-    </view>
-
-
-    <view class='font'>
-      <text>{{result.data.data.nli[0].data_obj[0].content}}</text>
-    </view>
-
-    <view class='font'>
-      <text>{{result.data.data.asr.result}}</text>
-    </view>
-
-  </view> -->
-
-    <view class='bigView'>
+   <view class='bigView'>
     <view class='viewBlank'>
     </view>
     <view class='viewTwo'>

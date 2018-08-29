@@ -1,4 +1,4 @@
-// pages/recreation/recreation.js
+// pages/movingcar/movingcar.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+  
   },
 
   /**
@@ -63,22 +63,9 @@ Page({
   onShareAppMessage: function () {
   
   },
-  joke: function(){
-    wx.navigateTo({
-      //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
-      url: '/pages/joke/joke'
-    })
-  },
-  intelligent: function(){
-    wx.navigateTo({
-      //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
-      url: '/pages/intelligent/intelligent'
-    })
-  },
-  movingcar: function () {
-    wx.navigateTo({
-      //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
-      url: '/pages/movingcar/movingcar'
+  makePhoneCall: function () {
+    wx.makePhoneCall({
+      phoneNumber: '17605674666' //仅为示例，并非真实的电话号码
     })
   }
 })

@@ -1,0 +1,4 @@
+<!--pages/movingcar/movingcar.wxml-->
+<text>pages/movingcar/movingcar.wxml</text>
+<!--size属性为default-->
+<button type="primary" size="default" bindtap="makePhoneCall"> 挪车助手 </button>

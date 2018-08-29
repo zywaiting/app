@@ -7,4 +7,7 @@
 <!--size属性为default-->
 <button type="primary" size="default" bindtap="intelligent"> 语音助手 </button>
 
+<!--size属性为default-->
+<button type="primary" size="default" bindtap="movingcar"> 挪车助手 </button>
+
 </view>
