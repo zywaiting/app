@@ -10,7 +10,10 @@ Page({
     markers: [],
     latitude: '',
     longitude: '',
-    rgcData: {}
+    latitude1: '',
+    longitude1: '',
+    rgcData: {},
+    sugData: ''
   },
 
   /**
@@ -19,7 +22,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     var BMap = new bmap.BMapWX({
-      ak: 'uvluntWrU8gxtNAvTtOVTFhZCMavAypQ'
+      ak: 'FB3MMlT54hn7AGAxUCkOmk0GGNOzTI7Z'
     });
 
   
@@ -27,6 +30,7 @@ Page({
       console.log(data)
     };
     var success = function (data) {
+      console.log(data)
       wxMarkerData = data.wxMarkerData;
       that.setData({
         markers: wxMarkerData
@@ -41,8 +45,8 @@ Page({
     BMap.regeocoding({
       fail: fail,
       success: success,
-      iconPath: '../../img/marker_red.png',
-      iconTapPath: '../../img/marker_red.png'
+      // iconPath: '../../img/marker_red.png',
+      // iconTapPath: '../../img/marker_red.png'
     });
   },
 
@@ -100,18 +104,50 @@ Page({
       phoneNumber: '17605674666' //仅为示例，并非真实的电话号码
     })
   },
-  touchMove: function () {
+  ballMoveEvent: function (e) {
+    console.log(e)
+    console.log("1111111111")
     var that = this;
     this.mapCtx.getCenterLocation({
       success: function (res) {
         console.log(res.longitude)
         console.log(res.latitude)
         that.setData({
-          latitude: res.longitude,
-          longitude: res.latitude
+          longitude1: 'res.longitude',
+          latitude1: "res.latitude"
         })
       }
     })
   },
-
+  // 绑定input输入 
+  bindKeyInput: function (e) {
+    console.log(e)
+    var that = this;
+    // 新建百度地图对象 
+    var BMap = new bmap.BMapWX({
+      ak: 'FB3MMlT54hn7AGAxUCkOmk0GGNOzTI7Z'
+    });
+    var fail = function (data) {
+      console.log(data)
+    };
+    var success = function (data) {
+      var sugData = '';
+      for (var i = 0; i < data.result.length; i++) {
+        sugData = sugData + data.result[i].name + '\n';
+      }
+      that.setData({
+        sugData: sugData
+      });
+      console.log(sugData)
+    }
+    // 发起suggestion检索请求 
+    BMap.suggestion({
+      query: e.detail.value,
+      region: '北京',
+      city_limit: true,
+      fail: fail,
+      success: success
+    });
+  } 
+ 
 })

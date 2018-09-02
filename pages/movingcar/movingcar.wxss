@@ -1,14 +1,33 @@
 /* pages/movingcar/movingcar.wxss */
 .map_container{
-    height: 450px;
+    height: 1000rpx;
     width: 100%;
 }
 
 .map {
+  height:1000rpx;
   width:750rpx;
-  height:800rpx;
 }
 /* .rgc_info {
     padding: 0 5px;
 } */
+.fontz{
+  font-size: 30rpx
+}
+
+
+
+.cover {
+  position: absolute;
+  bottom: 535rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imageStr {
+  width: 15%;
+  line-height: 1.5;
+  border-radius: 20rpx;
+}
 

@@ -2,12 +2,23 @@
 <!-- <text>pages/movingcar/movingcar.wxml</text>
 <!--size属性为default-->
 <!-- <button type="primary" size="default" bindtap="makePhoneCall"> 挪车助手 </button>  -->
-
-<view class="map_container" bindtouchmove='touchMove'>
-  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+<view class="section"> 
+  <input placeholder="输入关键字" auto-focus type="text" bindinput="bindKeyInput"/> 
+</view> 
+<view class="sug_info"> 
+  <text>{{sugData}}</text> 
 </view>
-<view class='zz'>
-  <text>{{latitude}}</text>
-  <text>{{longitude}}</text>
-  <!-- <text>{{rgcData.business}}</text> -->
+
+<scroll-view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindregionchange="ballMoveEvent">
+    <cover-view class="cover">
+      <cover-image class="imageStr" src='../../images/location.png'></cover-image>
+    </cover-view>
+  </map>
+</scroll-view>
+<view>
+  <text class='fontz'>latitude:{{latitude1}}</text>
+</view>
+<view>
+  <text class='fontz'>longitude2:{{longitude1}}</text>
 </view>
