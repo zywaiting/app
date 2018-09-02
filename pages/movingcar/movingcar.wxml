@@ -1,4 +1,13 @@
 <!--pages/movingcar/movingcar.wxml-->
-<text>pages/movingcar/movingcar.wxml</text>
+<!-- <text>pages/movingcar/movingcar.wxml</text>
 <!--size属性为default-->
-<button type="primary" size="default" bindtap="makePhoneCall"> 挪车助手 </button>
+<!-- <button type="primary" size="default" bindtap="makePhoneCall"> 挪车助手 </button>  -->
+
+<view class="map_container" bindtouchmove='touchMove'>
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+</view>
+<view class='zz'>
+  <text>{{latitude}}</text>
+  <text>{{longitude}}</text>
+  <!-- <text>{{rgcData.business}}</text> -->
+</view>
