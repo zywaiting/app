@@ -1,0 +1,6 @@
+<!--pages/love/love.wxml-->
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <web-view src="http://www.zhuyao.xyz:8080/"></web-view>
+  </view>
+</view>

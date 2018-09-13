@@ -30,7 +30,7 @@ Page({
       },
       success: function (res) {
         that.play(res.data.url)
-        console.log(res.data);
+        console.log("111"+res.data);
       },
       fail: function (res) {
         console.log("--------fail--------");
@@ -71,7 +71,7 @@ Page({
             location: app.globalData.location
           },
           success: function (res) {
-            console.log(res.data);
+            console.log(res.data.data);
             console.log("--------success--------");
             app.globalData.openId = res.data.data
           },
